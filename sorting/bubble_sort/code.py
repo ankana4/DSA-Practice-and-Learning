@@ -1,0 +1,23 @@
+''' Bubble Sort - It pushes the maximum to the last by adjacent swaps '''
+
+def bubble_sort_desc(arr):
+    n = len(arr)
+    for i in range(0, n-1):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
+
+def bubble_sort_asc(arr):
+    n = len(arr)
+    for i in range(0, n-1):
+        for j in range(0, n-i-1):
+            if arr[j] < arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr                
+
+numbers = [29, 10, 14, 37, 13]
+sorted_arr = bubble_sort_asc(numbers)
+print(sorted_arr)
+
+
