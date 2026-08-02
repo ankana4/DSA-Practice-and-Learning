@@ -17,7 +17,7 @@ def selection_sort(arr):
 def bubble_sort(arr):
     n = len(arr)
     if n == 0:
-        return []
+        return arr
     else:
         for i in range(0, n-1):
             for j in range(0, n-i-1):
@@ -28,7 +28,7 @@ def bubble_sort(arr):
 def insertion_sort(arr):
     n = len(arr)
     if n == 0:
-        return []
+        return arr
     else:
         for i in range(1, n):
             j = i
