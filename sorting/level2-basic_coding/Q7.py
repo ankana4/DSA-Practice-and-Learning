@@ -35,7 +35,7 @@ def insertion_sort(arr):
     return arr, count_of_comparison
 
 
-numbers = [10]
-sorted_numbers, count_of_comparison = insertion_sort(numbers)
+numbers = [10, 20]
+sorted_numbers, count_of_comparison = selection_sort(numbers)
 print(sorted_numbers)
 print(count_of_comparison)
