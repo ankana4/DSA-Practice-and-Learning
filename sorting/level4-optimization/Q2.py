@@ -24,3 +24,23 @@ numbers = [1, 2, 6, 3, 4, 5, 7, 8]
 sorted_arr = bubble_sort(numbers)
 
 print(sorted_arr)
+
+def bubble_sort_2(arr):
+    boundary = len(arr) - 1
+
+    while boundary > 0:
+        last_swap = 0
+
+        for j in range(boundary):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                last_swap = j
+
+        boundary = last_swap
+
+    return arr
+
+
+numbers = [1, 2, 6, 3, 4, 5, 7, 8]
+
+print(bubble_sort_2(numbers))
