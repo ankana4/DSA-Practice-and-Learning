@@ -7,7 +7,7 @@ def stable_selection_sort(arr):
     for i in range(n):
         min_index = i
 
-        # Find minimum
+        # Find minimum element
         for j in range(i + 1, n):
             if arr[j][1] < arr[min_index][1]:
                 min_index = j
@@ -15,12 +15,12 @@ def stable_selection_sort(arr):
         # Store minimum
         min_value = arr[min_index]
 
-        # Shift elements right
+        # Shift elements to the right
         while min_index > i:
             arr[min_index] = arr[min_index - 1]
             min_index -= 1
 
-        # Insert minimum
+        # Put minimum at its correct position
         arr[i] = min_value
 
     return arr
