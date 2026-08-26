@@ -29,3 +29,27 @@ def stable_selection_sort(arr):
 arr = [("A", 2), ("B", 2), ("C", 1)]
 
 print(stable_selection_sort(arr))
+
+#Alternate solution
+#The trade-off is that the algorithm is not stable.
+def stable_selection_sort(arr):
+    n = len(arr)
+
+    for i in range(n):
+        min_index = i
+
+        # Find minimum
+        for j in range(i + 1, n):
+            if arr[j][1] < arr[min_index][1]:
+                min_index = j
+
+        # Remove minimum and insert it at current position
+        min_value = arr.pop(min_index)
+        arr.insert(i, min_value)
+
+    return arr
+
+
+arr = [("A", 2), ("B", 2), ("C", 1)]
+
+print(stable_selection_sort(arr))
