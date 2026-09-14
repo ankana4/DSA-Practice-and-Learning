@@ -42,9 +42,13 @@ print(sorted_arr)
 def optimized_bubble_sort(arr):
     n = len(arr)
     for i in range(n-1, 0, -1):
+        didSwapped = 0
         for j in range(0, i):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
+                didSwapped = 1
+        if didSwapped == 0:
+            break        
     return arr              
 
 numbers = [29, 10, 14, 37, 13]
