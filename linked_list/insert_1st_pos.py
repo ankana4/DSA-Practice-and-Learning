@@ -19,8 +19,11 @@ class LinkedList:
                     
     def insert_1st_pos(self, info):
         new=Node(info)
-        new.next=self.head
-        self.head=new
+        if self.head is None:
+            self.head=new
+        else:    
+            new.next=self.head
+            self.head=new
 
     def show(self):
         temp=self.head
@@ -36,5 +39,7 @@ ll.create(13)
 ll.create(4)
 ll.create(17)
 ll.insert_1st_pos(3)  
+ll.insert_1st_pos(34)  
+
 
 ll.show()                       
