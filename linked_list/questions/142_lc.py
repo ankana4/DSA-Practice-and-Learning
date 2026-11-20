@@ -34,9 +34,13 @@ class LinkedList:
         if isCycle == False:
             return None
         slow=self.head
+        prev=None #remove a cycle
+        
         while slow!=fast:
             slow=slow.next
+            prev=fast
             fast=fast.next
+        prev.next=None    
         return slow             
     
     def display(self):
